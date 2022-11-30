@@ -1,0 +1,47 @@
+:root{
+    --cor-primeira-c1: rgb(128, 0, 0);
+    --cor-secundaria-c1: rgb(36, 92, 64);
+    --cor-hover-c1: rgb(255, 0, 0);
+}
+
+
+header{
+    text-align: center;
+    background-color:  	#800000;
+}
+
+body{
+    background-color: #FFDAB9;
+    background-image: url("img/liaoning-590x358.png");
+}
+
+.ele{
+    color: #A0522D;
+    background-color: #800000;
+    font-size: 25px;
+    color: aliceblue;
+    border-radius: 15px;
+}
+
+.c1{
+    border: none;
+    padding: 8px;
+    background-color: var(--cor-primeira-c1);
+    outline: none;
+    text-decoration: none;
+    color:white ;
+    cursor: pointer;
+    transition: background ,1s;
+    border-radius: 10px;
+}
+
+.c1:hover {
+    background-color: var(--cor-hover-c1);
+}
+
+.c1:active {
+    color: white;
+    background-color: white;
+}
+
+

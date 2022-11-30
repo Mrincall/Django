@@ -1,0 +1,44 @@
+{% load static %}
+
+<html>
+
+<title> Login </title>
+
+    <header>
+        <h1 class="t1"> Omertà Aluguel de campos LTDA </h1>
+         <h1 class="t2" id="hora"></h1>
+        <link rel="stylesheet" href="{% static 'css/lgstyles.css' %}">
+        <script src="{% static 'js/cad.js' %}"></script>
+    </header>
+
+
+
+    <body>
+    <br>
+
+
+    <t1 class="p1"> <b>Login </b> </t1>
+        <br>
+        <br>
+
+        <form action="{% url 'login' %}" method="POST">{% csrf_token %}
+            <a class="s1"> <b> Username: </b> </a>
+            <input class="w1" type="text" placeholder="Username..." name="username">
+            <br>
+            <br>
+            <a class="s1"> <b> Password: </b> </a>
+             <input class="w1" type="password" placeholder="Senha..." name="senha">
+            <br>
+            <br>
+            <input class="c1" type="submit" value="Logar">
+        </form>
+
+
+            <footer>
+          <a> Cidades: Rio de Janeiro, Barra do Pirai, Sao Paulo</a>
+        </footer>
+
+    </body>
+
+
+</html>

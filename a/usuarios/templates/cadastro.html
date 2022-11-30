@@ -1,0 +1,42 @@
+{% load static %}
+
+
+<html>
+
+<title> Cadastro </title>
+
+
+    <header>
+        <h1 class="t1"> Omertà Aluguel de campos LTDA </h1>
+        <h1 class="t2" id="hora"></h1>
+        <link rel="stylesheet" href="{% static 'css/cdstyles.css' %}">
+        <script src="{% static 'js/cad.js' %}"></script>
+    </header>
+
+    <body>
+    <br>
+    <br>
+
+
+         <t1 class="p1"> <b> Cadastrar </b> </t1>
+         <br>
+         <br>
+        <form action="{% url 'cadastro' %}" method="POST">{% csrf_token %}
+            <a class="p1"> <b> Usuário: </b> </a>
+            <input type="text" placeholder="Username..." name="username">
+            <br>
+            <br>
+            <a class="p1"> <b>Email: </b> </a>
+             <input type="email" placeholder="Email..." name="email">
+            <br>
+            <br>
+            <a class="p1"> <b> Senha: </b> </a>
+             <input type="password" placeholder="Senha..." name="senha">
+            <br>
+            <br>
+            <input class="c1" type="submit" value="Cadastrar">
+        </form>
+
+    </body>
+
+</html>

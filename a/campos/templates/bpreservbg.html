@@ -1,0 +1,37 @@
+{% load static %}
+
+<html>
+
+<title> Bengalinha</title>
+
+        <header>
+
+            <h1 class="t1"> Campo Bengalinha</h1>
+            <link rel="stylesheet" href="{% static 'css/bpreservbg.css' %}">
+         </header>
+
+        <body>
+        <a class="l1"> Horario de funcionamento: 13hrs ate 23hrs</a>
+        <br>
+        <br>
+            <form action="{% url 'bpreservbg' %}" method="POST">{% csrf_token %}
+                <a class="l1"> Data: </a>
+                <input type="date" placeholder="Data..." name="de">
+                <br>
+                <br>
+                <a class="l1"> Inicio: </a>
+                <input type="number" placeholder="Inicio..." name="i1" min="13" max="23">
+                <br>
+                <br>
+                <a class="l1"> Termino: </a>
+                 <input type="number" placeholder="Termino..." name="t1" min="13" max="23">
+                <br>
+                <br>
+                <input class="c1" type="submit" value="calcular valor total">
+                <br>
+                <br>
+                <a class="l1"> O preço de {{ tempo }} horas no dia {{ data }} sera de: R$ {{ preco }} </a>
+            </form>
+        </body>
+
+</html>

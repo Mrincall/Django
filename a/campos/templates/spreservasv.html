@@ -1,0 +1,32 @@
+{% load static %}
+
+<html>
+
+        <header>
+
+            <h1 class="t1">  Campo Aero Soccer Vila Santa Catarina  </h1>
+            <link rel="stylesheet" href="{% static 'css/spreservasv.css' %}">
+         </header>
+
+        <body>
+            <form action="{% url 'spreservasv' %}" method="POST">{% csrf_token %}
+                <a class="l1"> Data: </a>
+                <input type="date" placeholder="Data..." name="dg">
+                <br>
+                <br>
+                <a class="l1"> Inicio: </a>
+                <input type="number" placeholder="Inicio..." name="i7" min="13" max="23">
+                <br>
+                <br>
+                <a class="l1"> Termino: </a>
+                 <input type="number" placeholder="Termino..." name="t7" min="13" max="23">
+                <br>
+                <br>
+                <input class="c1" type="submit" value="calcular valor total">
+                <br>
+                <br>
+                <a class="l1"> O preço de {{ tempo }} horas no dia {{ data }} sera de: R$ {{ preco }} </a>
+            </form>
+        </body>
+
+</html>

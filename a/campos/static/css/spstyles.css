@@ -1,0 +1,49 @@
+header{
+    text-align: center;
+    background-color:  	#800000;
+}
+
+body{
+    background-image: url("https://content.r9cdn.net/rimg/dimg/50/6c/11424434-city-10988-16ab1ad2d20.jpg?crop=true&width=1366&height=768&xhint=2874&yhint=1688");
+}
+
+.p1 {
+    color: aliceblue;
+    font-size: 20px;
+    background-color: #800000;
+    border-radius: 15px;
+}
+
+.c1 {
+    border: none;
+    padding: 8px;
+    background-color: rgb(128, 0, 0);
+    outline: none;
+    text-decoration: none;
+    color:white ;
+    cursor: pointer;
+    transition: background ,1s;
+    border-radius: 10px;
+}
+
+.c1:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.f1:active {
+    color: white;
+    background-color: white;
+}
+
+.t1 {
+    color: aliceblue;
+}
+
+.s1 {
+    color: aliceblue;
+    font-size: 25px;
+    background-color: #800000;
+    border-radius: 20px;
+
+
+}

@@ -1,0 +1,40 @@
+{% load static %}
+
+<html>
+
+<title> Centraç Sport Club </title>
+
+        <header>
+
+            <h1 class="t1"> Campo Central Sport Club </h1>
+            <link rel="stylesheet" href="{% static 'css/bpreservcsc.css' %}">
+            <script type="text/javascript" src="{% static 'javascript/csc.js' %}"></script>
+         </header>
+
+        <body>
+        <a class="l1"> Horario de funcionamento: 13hrs ate 23hrs</a>
+        <br>
+        <br>
+            <form action="{% url 'bpreservcsc' %}" method="POST">{% csrf_token %}
+                <a class="l1"> Data: </a>
+                <input type="date" placeholder="Data..." name="df">
+                <br>
+                <br>
+                <a class="l1"> Inicio: </a>
+                <input type="number" placeholder="Inicio..." name="if" min="13" max="23">
+                <br>
+                <br>
+                <a class="l1"> Termino: </a>
+                 <input type="number" placeholder="Termino..." name="tf" min="13" max="23">
+                <br>
+                <br>
+               <input class="c1" type="submit" onclick="divaapear('divdiva')" value="calcular valor total">
+                <br>
+                <br>
+                <div class="divdiva" id="minhaDiv">
+                    <a> O preço de {{ tempo }} horas no dia {{ data }} sera de: R$ {{ preco }} </a>
+                </div>
+            </form>
+        </body>
+
+</html>
